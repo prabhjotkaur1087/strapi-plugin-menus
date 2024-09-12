@@ -2,13 +2,22 @@
   "name": "strapi-plugin-menus",
   "version": "1.6.1",
   "description": "A plugin for Strapi CMS to customize the structure of menus and menu items.",
-  "license": "MIT",
-  "strapi": {
-    "displayName": "Menus",
-    "name": "menus",
-    "description": "Customize the structure of menus and menu items.",
-    "kind": "plugin"
+  "keywords": [
+    "strapi",
+    "plugin",
+    "link",
+    "list",
+    "mega",
+    "menu",
+    "navigation",
+    "nested",
+    "page"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattmilburn/strapi-plugin-menus.git"
   },
+  "license": "MIT",
   "author": {
     "name": "Matt Milburn",
     "url": "https://github.com/mattmilburn"
@@ -19,16 +28,12 @@
       "url": "https://github.com/mattmilburn"
     }
   ],
-  "engines": {
-    "node": ">=16.0.0 <=20.x.x",
-    "npm": ">=6.0.0"
-  },
   "scripts": {
-    "prepare": "husky install",
-    "lint": "eslint --fix-dry-run --ext .js,.jsx,.ts,.tsx ./",
-    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ./",
     "format": "prettier --check \"**/*.+(js|jsx|ts|tsx|json|css|md)\"",
     "format:fix": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|md)\"",
+    "lint": "eslint --fix-dry-run --ext .js,.jsx,.ts,.tsx ./",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ./",
+    "prepare": "husky install",
     "test": "jest --testPathPattern='\\/__tests__\\/.*\\.(?:test|spec)\\.js$' --ci 2>&1"
   },
   "lint-staged": {
@@ -47,25 +52,12 @@
     "react-router-dom": "^5.3.4",
     "react-window": "1.8.9"
   },
-  "peerDependencies": {
-    "@strapi/design-system": "^1.19.0",
-    "@strapi/helper-plugin": "^4.25.10",
-    "@strapi/icons": "^1.9.0",
-    "@strapi/strapi": "^4.25.10",
-    "@strapi/utils": "^4.25.10",
-    "formik": "^2.2.9",
-    "lodash": "4.17.21",
-    "prop-types": "^15.8.1",
-    "react": "^18.0.0",
-    "react-intl": "^6.4.1",
-    "styled-components": "5.3.3"
-  },
   "devDependencies": {
     "@babel/core": "7.22.9",
     "@babel/eslint-parser": "7.22.9",
     "@babel/preset-react": "7.22.5",
-    "@strapi/design-system": "^1.19.0",
-    "@strapi/helper-plugin": "^4.25.10",
+    "@strapi/design-system": "1.19.0",
+    "@strapi/helper-plugin": "4.25.10",
     "@strapi/icons": "^1.9.0",
     "@strapi/strapi": "^4.25.10",
     "@strapi/utils": "^4.25.10",
@@ -94,19 +86,27 @@
     "react-intl": "^6.4.1",
     "styled-components": "5.3.3"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mattmilburn/strapi-plugin-menus.git"
+  "peerDependencies": {
+    "@strapi/design-system": "1.19.0",
+    "@strapi/helper-plugin": "4.25.10",
+    "@strapi/icons": "^1.9.0",
+    "@strapi/strapi": "^4.25.10",
+    "@strapi/utils": "^4.25.10",
+    "formik": "^2.2.9",
+    "lodash": "4.17.21",
+    "prop-types": "^15.8.1",
+    "react": "^18.0.0",
+    "react-intl": "^6.4.1",
+    "styled-components": "5.3.3"
   },
-  "keywords": [
-    "strapi",
-    "plugin",
-    "link",
-    "list",
-    "mega",
-    "menu",
-    "navigation",
-    "nested",
-    "page"
-  ]
+  "engines": {
+    "node": ">=16.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "displayName": "Menus",
+    "name": "menus",
+    "description": "Customize the structure of menus and menu items.",
+    "kind": "plugin"
+  }
 }
