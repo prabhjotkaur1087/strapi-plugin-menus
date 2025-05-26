@@ -172,6 +172,17 @@ const IndexView = ({ history }) => {
         sortable: false,
       },
     },
+    {
+      name: 'order',
+      key: 'order',
+      metadatas: {
+        label: formatMessage({
+          id: getTrad('form.label.order'),
+          defaultMessage: 'Order',
+        }),
+        sortable: true,
+      },
+    },
   ];
 
   return (

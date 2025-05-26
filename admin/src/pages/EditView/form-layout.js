@@ -37,6 +37,20 @@ const menu = [
       s: 12,
     },
   },
+  {
+    input: {
+      intlLabel: {
+        id: getTrad('form.label.sequence'),
+        defaultMessage: 'Sequence',
+      },
+      name: 'sequence',
+      type: 'string',
+    },
+    grid: {
+      col: 6,
+      s: 12,
+    },
+  },
 ];
 
 const menuItem = [

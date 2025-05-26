@@ -48,6 +48,7 @@ const EDIT_QUERY_KEY = 'menus-edit-{id}';
 const defaultValues = {
   title: '',
   slug: '',
+  sequence: '',
   items: [],
 };
 
@@ -162,7 +163,7 @@ const EditView = ({ history, location, match }) => {
     (body) => {
       // Maybe clone this menu with sanitized data.
       if (isCloning) {
-        const menuData = pick(body.data, ['title', 'slug'], {});
+        const menuData = pick(body.data, ['title', 'sequence', 'slug'], {});
         const menuItemIdMap = body.data.items.map((item) => ({
           id: item.id,
           createId: uniqueId('create'),

@@ -11,7 +11,7 @@ const { getService } = require('../utils');
 module.exports = createCoreService(UID_MENU, ({ strapi }) => ({
   async create(params) {
     const { data } = params;
-    const menuData = pick(data, ['title', 'slug'], {});
+    const menuData = pick(data, ['title', 'sequence', 'slug'], {});
     const menuItemsData = get(data, 'items', []);
 
     // Create new menu.
@@ -37,7 +37,7 @@ module.exports = createCoreService(UID_MENU, ({ strapi }) => ({
       populate: ['items', 'items.parent'],
     });
 
-    const menuData = pick(data, ['title', 'slug'], {});
+    const menuData = pick(data, ['title', 'sequence', 'slug'], {});
     const menuItemsData = get(data, 'items', []);
     const prevItemsData = get(entityToUpdate, 'items', []);
 
