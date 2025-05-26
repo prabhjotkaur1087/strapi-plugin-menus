@@ -111,6 +111,7 @@ const MenuItemsManager = ({ fields }) => {
       <GridItem col={6} s={12}>
         {activeMenuItem && (
           <div
+            className="menu-item-manager-sticky"
             ref={stickyRef}
             style={
               isSticky
