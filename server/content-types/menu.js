@@ -31,9 +31,6 @@ module.exports = {
       targetField: 'title',
       required: true,
     },
-    sequence: {
-      type: 'string',
-    },
     items: {
       type: 'relation',
       relation: 'oneToMany',
