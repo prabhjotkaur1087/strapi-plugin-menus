@@ -110,19 +110,7 @@ const MenuItemsManager = ({ fields }) => {
       </GridItem>
       <GridItem col={6} s={12}>
         {activeMenuItem && (
-          <div
-            className="menu-item-manager-sticky"
-            ref={stickyRef}
-            style={
-              isSticky
-                ? {
-                    width: stickyWidth ? `${stickyWidth}px` : 'auto',
-                    position: 'fixed',
-                    top: STRAPI_HEADER_HEIGHT,
-                  }
-                : {}
-            }
-          >
+          <div className="menu-item-manager-sticky" ref={stickyRef}>
             <EditMenuItem data={activeMenuItem} fields={fields} />
           </div>
         )}

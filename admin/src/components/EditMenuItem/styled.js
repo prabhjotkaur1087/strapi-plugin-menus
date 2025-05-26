@@ -7,7 +7,7 @@ export const StyledTabGroup = styled(TabGroup)`
 
     button {
       position: relative;
-      top: 2px;
+      top: 3px;
     }
   }
 `;
