@@ -47,6 +47,9 @@ const MenuRows = ({ data, onClickClone, onClickDelete, onClickEdit }) => {
             <Typography textColor="neutral800">{row.attributes.slug}</Typography>
           </Td>
           <Td>
+            <Typography textColor="neutral800">{row.attributes.sequence}</Typography>
+          </Td>
+          <Td>
             <Badge>{get(row, 'attributes.items.data.length', 0)}</Badge>{' '}
             <Typography textColor="neutral800">
               {formatMessage(
@@ -106,6 +109,7 @@ MenuRows.propTypes = {
       attributes: PropTypes.shape({
         title: PropTypes.string.isRequired,
         slug: PropTypes.string.isRequired,
+        sequence: PropTypes.string.isRequired,
         items: PropTypes.shape({
           data: PropTypes.array.isRequired,
         }).isRequired,

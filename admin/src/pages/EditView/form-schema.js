@@ -33,6 +33,7 @@ const itemSchema = yup.object().shape({
 const schema = yup.object().shape({
   title: yup.string(translatedErrors.string).nullable().required(translatedErrors.required),
   slug: yup.string(translatedErrors.string).nullable().required(translatedErrors.required),
+  sequence: yup.string(translatedErrors.string).nullable().required(translatedErrors.required),
   items: yup.array().of(itemSchema),
 });
 
